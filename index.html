@@ -10,21 +10,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
     <h1>Francisco Sánchez</h1>
     <div id="data-container">
-        <h2>Presentación</h2>
-        <p> Soy Argentino, tengo 19 años y me gradue de la academia <span id="henry">SoyHenry</span> a mitad de año.
-            desde entonces trabajé en una empresa en la que aprendí a usar <span id="vue">Vue</span>, mejore el manejo
-            de <span id="bootstrap">Bootstrap</span>, <span id="css">Css</span>
-            y me familiarizé con las metodologías agiles tipo <span id="scrum">SCRUM</span>.
-        </p>
-        <p>Actualmente estoy buscando un trabajo donde pueda consolidarme como desarollador 
-            Front-End y seguir perfeccionando mis habilidades para plasmar lo que el cliente quiere de la mejor manera.</p>
-        <h2>Conocimientos</h2>
+        <div class="lang-select"><button onClick="español()" type="button" class="lang-btn">ESpañol</button><button onClick="english()"
+                type="button" class="lang-btn">ENglish</button></div>
+        <h2 id="presentacion">Presentación</h2>
+        <div id="descripcion">
+            <p> Soy Argentino, tengo 19 años y me gradue de la academia <span id="henry">SoyHenry</span> a mitad de año.
+                desde entonces trabajé en una empresa en la que aprendí a usar <span id="vue">Vue</span>, mejore el manejo
+                de <span id="bootstrap">Bootstrap</span>, <span id="css">Css</span>
+                y me familiarizé con las metodologías agiles tipo <span id="scrum">SCRUM</span>. 
+                <br/>
+                <br/>
+                Actualmente estoy buscando
+                un trabajo donde pueda consolidarme como desarollador
+                Front-End y seguir perfeccionando mis habilidades para plasmar lo que el cliente quiere de la mejor manera.
+            </p>
+        </div>
+        <h2 id="conocimientos">Conocimientos</h2>
         <div id="knowledge-container">
             <div class="knowledge">
                 <div class="icon-container">
@@ -76,24 +85,49 @@
             </div>
         </div>
         <div></div>
-        <h2>Contactos</h2>
+        <h2 id="contactos">Contactos</h2>
         <div id="contact-container">
             <div class="contact">
                 <p><i class="fa-solid fa-phone contact-icon"></i> fran41720@gmail.com</p>
             </div>
             <div class="contact">
-                <p><i class="fa-solid fa-envelope contact-icon"></i> +54 11 5342-8291</p>
+                <p><i class="fa-solid fa-envelope contact-icon"></i> +54 9 11 3625-9183</p>
             </div>
             <div class="contact">
-                <p onClick="redirect('https://www.linkedin.com/in/francisco-s%C3%A1nchez-63a220212')" style="cursor:pointer"><i  class="fa-brands fa-linkedin contact-icon"></i> Linkedin (click aquí)</p>
+                <p onClick="redirect('https://www.linkedin.com/in/francisco-s%C3%A1nchez-63a220212')"
+                    style="cursor:pointer"><i class="fa-brands fa-linkedin contact-icon"></i> Linkedin <span id="click-aqui">(click aquí)</span></p>
             </div>
         </div>
-        <br/>
+        <br />
     </div>
 </body>
 <script type="text/javascript">
-    var redirect=(link)=>{
+    var redirect = (link) => {
         window.location.href = link;
+    }
+    var english = () => {
+        const descripcion = document.getElementById("descripcion");
+        const presentacion = document.getElementById("presentacion");
+        const conocimientos = document.getElementById("conocimientos");
+        const contactos = document.getElementById("contactos");
+        const clickAqui = document.getElementById("click-aqui");
+        descripcion.innerHTML='<p>I am an Argentinian 19 years old boy who recently graduated from <span id="henry">SoyHenry</span> academy where i´ve learned how to improve each day my talents as a developer, then worked on a company as a Front end web developer using <span id="vue">Vue</span> and improving my <span id="bootstrap">bootstrap</span> and <span id="css">css3</span> habilities and working with <span id="scrum">SCRUM</span>. <br/><br/> now im looking for a front-end job where i can give the best of my self to make the client wishes come true in the best way.'
+        presentacion.innerText = "About Me"
+        conocimientos.innerText = "Knowledge"
+        contactos.innerText = "Contacts"
+        clickAqui.innerText = "(click here)"
+    }
+    var español = () => {
+        const descripcion = document.getElementById("descripcion");
+        const presentacion = document.getElementById("presentacion");
+        const conocimientos = document.getElementById("conocimientos");
+        const contactos = document.getElementById("contactos");
+        const clickAqui = document.getElementById("click-aqui");
+        descripcion.innerHTML = '<p> Soy Argentino, tengo 19 años y me gradue de la academia <span id="henry">SoyHenry</span> a mitad de año. desde entonces trabajé en una empresa en la que aprendí a usar <span id="vue">Vue</span>, mejore el manejo de <span id="bootstrap">Bootstrap</span>, <span id="css">Css</span> y me familiarizé con las metodologías agiles tipo <span id="scrum">SCRUM</span>. <br/><br/>Actualmente estoy buscando un trabajo donde pueda consolidarme como desarollador Front-End y seguir perfeccionando mis habilidades para plasmar lo que el cliente quiere de la mejor manera. </p>'
+        presentacion.innerText = "Presentacion";
+        conocimientos.innerText = "Conocimientos";
+        contactos.innerText = "Contactos";
+        clickAqui.innerText = "(click aquí)"
     }
 </script>
 
