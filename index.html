@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francisco Sánchez</title>
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <h1>Francisco Sánchez</h1>
+    <div id="data-container">
+        <h2>Presentación</h2>
+        <p> Soy Argentino, tengo 19 años y me gradue de la academia <span id="henry">SoyHenry</span> a mitad de año.
+            desde entonces trabajé en una empresa en la que aprendí a usar <span id="vue">Vue</span>, mejore el manejo
+            de <span id="bootstrap">Bootstrap</span>, <span id="css">Css</span>
+            y me familiarizé con las metodologías agiles tipo <span id="scrum">SCRUM</span>.
+        </p>
+        <p>Actualmente estoy buscando un trabajo donde pueda consolidarme como desarollador 
+            Front-End y seguir perfeccionando mis habilidades para plasmar lo que el cliente quiere de la mejor manera.</p>
+        <h2>Conocimientos</h2>
+        <div id="knowledge-container">
+            <div class="knowledge">
+                <div class="icon-container">
+                    <i class="fa-brands fa-js icon"></i>
+                </div>
+                <p>JavaScript</p>
+            </div>
+            <div class="knowledge">
+                <div class="icon-container">
+                    <i class="fa-brands fa-vuejs icon"></i>
+                </div>
+                <p>vue</p>
+            </div>
+            <div class="knowledge">
+                <div class="icon-container">
+                    <i class="fa-brands fa-react icon"></i>
+                </div>
+                <p>REact</p>
+            </div>
+            <div class="knowledge">
+                <div class="icon-container">
+                    <i class="fa-brands fa-html5 icon"></i>
+                </div>
+                <p>html5</p>
+            </div>
+            <div class="knowledge">
+                <div class="icon-container">
+                    <i class="fa-brands fa-css3 icon"></i>
+                </div>
+                <p>css3</p>
+            </div>
+            <div class="knowledge">
+                <div class="icon-container">
+                    <i class="fa-brands fa-sass icon"></i>
+                </div>
+                <p>sass</p>
+            </div>
+            <div class="knowledge">
+                <div class="icon-container">
+                    <i class="fa-brands fa-bootstrap icon"></i>
+                </div>
+                <p>bootstrap</p>
+            </div>
+            <div class="knowledge">
+                <div class="icon-container">
+                    <i class="fa-brands fa-node-js icon"></i>
+                </div>
+                <p>Node</p>
+            </div>
+        </div>
+        <div></div>
+        <h2>Contactos</h2>
+        <div id="contact-container">
+            <div class="contact">
+                <p><i class="fa-solid fa-phone contact-icon"></i> fran41720@gmail.com</p>
+            </div>
+            <div class="contact">
+                <p><i class="fa-solid fa-envelope contact-icon"></i> +54 11 5342-8291</p>
+            </div>
+            <div class="contact">
+                <p onClick="redirect('https://www.linkedin.com/in/francisco-s%C3%A1nchez-63a220212')" style="cursor:pointer"><i  class="fa-brands fa-linkedin contact-icon"></i> Linkedin (click aquí)</p>
+            </div>
+        </div>
+        <br/>
+    </div>
+</body>
+<script type="text/javascript">
+    var redirect=(link)=>{
+        window.location.href = link;
+    }
+</script>
+
+</html>
